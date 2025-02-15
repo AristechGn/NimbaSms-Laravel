@@ -12,9 +12,29 @@ class NimbaSmsClient implements SmsClientInterface
 {
     private NimbaSmsConfig $config;
 
+    /**
+     * Permet de définir dynamiquement si la vérification SSL doit être activée ou non.
+     * Par défaut, on récupère la valeur depuis la configuration (config/nimbasms.php).
+     */
+    private bool $sslVerify;
+
     public function __construct(NimbaSmsConfig $config)
     {
         $this->config = $config;
+        // Valeur par défaut récupérée depuis la configuration
+        $this->sslVerify = config('nimbasms.ssl_verify');
+    }
+
+    /**
+     * Permet de modifier la vérification SSL à la volée.
+     *
+     * @param bool $verify
+     * @return self
+     */
+    public function setSslVerify(bool $verify): self
+    {
+        $this->sslVerify = $verify;
+        return $this;
     }
 
     /**
@@ -34,9 +54,9 @@ class NimbaSmsClient implements SmsClientInterface
 
         $url = $this->config->getBaseUrl() . $endpoint;
 
-        // On configure le client HTTP avec l'option "verify"
+        // On configure le client HTTP en utilisant la valeur dynamique de $this->sslVerify.
         $httpClient = Http::withOptions([
-            'verify' => config('nimbasms.ssl_verify'),
+            'verify' => $this->sslVerify,
         ]);
 
         /** @var Response $response */
