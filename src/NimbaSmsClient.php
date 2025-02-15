@@ -6,6 +6,7 @@ use Aristech\NimbaSms\Config\NimbaSmsConfig;
 use Aristech\NimbaSms\Contracts\SmsClientInterface;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;
+use Aristech\NimbaSms\Exceptions\NimbaSmsException;
 
 class NimbaSmsClient implements SmsClientInterface
 {
@@ -37,6 +38,10 @@ class NimbaSmsClient implements SmsClientInterface
         $response = $method === 'POST' 
             ? Http::post($url, $data)
             : Http::get($url, $data);
+
+        if ($response->failed()) {
+            throw NimbaSmsException::fromResponse($response);
+        }
 
         return $response->json();
     }
