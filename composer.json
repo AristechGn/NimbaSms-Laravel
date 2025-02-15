@@ -1,6 +1,7 @@
 {
     "name": "aristech/nimbasms",
     "description": "Laravel package for Nimba SMS API",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Aristech\\NimbaSms\\": "src/"
