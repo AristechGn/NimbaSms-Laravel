@@ -1,0 +1,27 @@
+{
+    "name": "aristech/nimbasms",
+    "description": "Laravel package for Nimba SMS API",
+    "autoload": {
+        "psr-4": {
+            "Aristech\\NimbaSms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ArisTech",
+            "email": "aristechdev@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aristech\\NimbaSms\\Providers\\NimbaSmsServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.*",
+        "illuminate/support": "^10.*|11.*",
+        "illuminate/http": "^10.*|11.*"
+    }
+}
