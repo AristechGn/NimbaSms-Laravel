@@ -29,8 +29,8 @@ class NimbaSmsClientTest extends TestCase
     public function it_can_send_sms()
     {
         Http::fake([
-            'api.nimbasms.com/*' => Http::response([
-                'status' => 'success',
+            'https://api.nimbasms.com/send' => Http::response([
+                'status'  => 'success',
                 'message' => 'SMS sent successfully'
             ], 200)
         ]);
@@ -42,10 +42,10 @@ class NimbaSmsClientTest extends TestCase
         );
 
         Http::assertSent(function ($request) {
-            return $request->url() == 'https://api.nimbasms.com/send' &&
-                   $request['serviceId'] == 'test_service_id' &&
-                   $request['secret'] == 'test_secret' &&
-                   $request['senderName'] == 'TestSender';
+            return str_starts_with($request->url(), 'https://api.nimbasms.com/send')
+                && ($request->data()['serviceId'] ?? null) === 'test_service_id'
+                && ($request->data()['secret'] ?? null) === 'test_secret'
+                && ($request->data()['senderName'] ?? null) === 'TestSender';
         });
 
         $this->assertEquals('success', $response['status']);
@@ -55,9 +55,9 @@ class NimbaSmsClientTest extends TestCase
     public function it_throws_exception_on_error()
     {
         Http::fake([
-            'api.nimbasms.com/*' => Http::response([
+            'https://api.nimbasms.com/send' => Http::response([
                 'error' => [
-                    'code' => 'invalid_credentials',
+                    'code'    => 'invalid_credentials',
                     'message' => 'Invalid credentials provided'
                 ]
             ], 401)
@@ -77,9 +77,9 @@ class NimbaSmsClientTest extends TestCase
     public function it_can_create_contact()
     {
         Http::fake([
-            'api.nimbasms.com/*' => Http::response([
+            'https://api.nimbasms.com/contacts/create' => Http::response([
                 'status' => 'success',
-                'data' => ['id' => '123']
+                'data'   => ['id' => '123']
             ], 200)
         ]);
 
@@ -90,7 +90,7 @@ class NimbaSmsClientTest extends TestCase
         );
 
         Http::assertSent(function ($request) {
-            return $request->url() == 'https://api.nimbasms.com/contacts/create';
+            return $request->url() === 'https://api.nimbasms.com/contacts/create';
         });
 
         $this->assertEquals('success', $response['status']);
@@ -100,16 +100,18 @@ class NimbaSmsClientTest extends TestCase
     public function it_can_get_account_details()
     {
         Http::fake([
-            'api.nimbasms.com/*' => Http::response([
+            'https://api.nimbasms.com/account/details*' => Http::response([
                 'status' => 'success',
-                'data' => ['balance' => 100]
+                'data'   => ['balance' => 100]
             ], 200)
         ]);
 
         $response = $this->client->getAccountDetails();
 
         Http::assertSent(function ($request) {
-            return $request->url() == 'https://api.nimbasms.com/account/details';
+            return str_starts_with($request->url(), 'https://api.nimbasms.com/account/details')
+                && ($request->data()['serviceId'] ?? null) === 'test_service_id'
+                && ($request->data()['secret'] ?? null) === 'test_secret';
         });
 
         $this->assertEquals('success', $response['status']);

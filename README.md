@@ -1,19 +1,59 @@
 # Nimba SMS Package for Laravel
 
+
+
+```
+Signature:
+·························································································································································
+:$$$$$$$$$$$$$$$AAA$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$iiii$$$$$$$$$$$$$$$$TTTTTTTTTTTTTTTTTTTTTTT$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$hhhhhhh$$$$$$$$$$$$$:
+:$$$$$$$$$$$$$$A:::A$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$i::::i$$$$$$$$$$$$$$$T:::::::::::::::::::::T$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$h:::::h$$$$$$$$$$$$$:
+:$$$$$$$$$$$$$A:::::A$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$iiii$$$$$$$$$$$$$$$$T:::::::::::::::::::::T$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$h:::::h$$$$$$$$$$$$$:
+:$$$$$$$$$$$$A:::::::A$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$T:::::TT:::::::TT:::::T$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$h:::::h$$$$$$$$$$$$$:
+:$$$$$$$$$$$A:::::::::A$$$$$$$$$$rrrrr$$$rrrrrrrrr$$iiiiiii$$$$$ssssssssssTTTTTT$$T:::::T$$TTTTTTeeeeeeeeeeee$$$$$$$$cccccccccccccccch::::h$hhhhh$$$$$$$:
+:$$$$$$$$$$A:::::A:::::A$$$$$$$$$r::::rrr:::::::::r$i:::::i$$$ss::::::::::s$$$$$$$T:::::T$$$$$$ee::::::::::::ee$$$$cc:::::::::::::::ch::::hh:::::hhh$$$$:
+:$$$$$$$$$A:::::A$A:::::A$$$$$$$$r:::::::::::::::::r$i::::i$ss:::::::::::::s$$$$$$T:::::T$$$$$e::::::eeeee:::::ee$c:::::::::::::::::ch::::::::::::::hh$$:
+:$$$$$$$$A:::::A$$$A:::::A$$$$$$$rr::::::rrrrr::::::ri::::i$s::::::ssss:::::s$$$$$T:::::T$$$$e::::::e$$$$$e:::::ec:::::::cccccc:::::ch:::::::hhh::::::h$:
+:$$$$$$$A:::::A$$$$$A:::::A$$$$$$$r:::::r$$$$$r:::::ri::::i$$s:::::s$$ssssss$$$$$$T:::::T$$$$e:::::::eeeee::::::ec::::::c$$$$$ccccccch::::::h$$$h::::::h:
+:$$$$$$A:::::AAAAAAAAA:::::A$$$$$$r:::::r$$$$$rrrrrrri::::i$$$$s::::::s$$$$$$$$$$$T:::::T$$$$e:::::::::::::::::e$c:::::c$$$$$$$$$$$$$h:::::h$$$$$h:::::h:
+:$$$$$A:::::::::::::::::::::A$$$$$r:::::r$$$$$$$$$$$$i::::i$$$$$$$s::::::s$$$$$$$$T:::::T$$$$e::::::eeeeeeeeeee$$c:::::c$$$$$$$$$$$$$h:::::h$$$$$h:::::h:
+:$$$$A:::::AAAAAAAAAAAAA:::::A$$$$r:::::r$$$$$$$$$$$$i::::i$ssssss$$$s:::::s$$$$$$T:::::T$$$$e:::::::e$$$$$$$$$$$c::::::c$$$$$ccccccch:::::h$$$$$h:::::h:
+:$$$A:::::A$$$$$$$$$$$$$A:::::A$$$r:::::r$$$$$$$$$$$i::::::is:::::ssss::::::s$$$TT:::::::TT$$e::::::::e$$$$$$$$$$c:::::::cccccc:::::ch:::::h$$$$$h:::::h:
+:$$A:::::A$$$$$$$$$$$$$$$A:::::A$$r:::::r$$$$$$$$$$$i::::::is::::::::::::::s$$$$T:::::::::T$$$e::::::::eeeeeeee$$$c:::::::::::::::::ch:::::h$$$$$h:::::h:
+:$A:::::A$$$$$$$$$$$$$$$$$A:::::A$r:::::r$$$$$$$$$$$i::::::i$s:::::::::::ss$$$$$T:::::::::T$$$$ee:::::::::::::e$$$$cc:::::::::::::::ch:::::h$$$$$h:::::h:
+:AAAAAAA$$$$$$$$$$$$$$$$$$$AAAAAAArrrrrrr$$$$$$$$$$$iiiiiiii$$sssssssssss$$$$$$$TTTTTTTTTTT$$$$$$eeeeeeeeeeeeee$$$$$$cccccccccccccccchhhhhhh$$$$$hhhhhhh:
+:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$:
+:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$:
+:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$:
+:$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$:
+·························································································································································
+ _______   _______   ________   ______   __       __  ________  _______  
+/       \ /       \ /        | /      \ /  \     /  |/        |/       \ 
+$$$$$$$  |$$$$$$$  |$$$$$$$$/ /$$$$$$  |$$  \   /$$ |$$$$$$$$/ $$$$$$$  |
+$$ |  $$ |$$ |__$$ |$$ |__    $$ |__$$ |$$$  \ /$$$ |$$ |__    $$ |__$$ |
+$$ |  $$ |$$    $$< $$    |   $$    $$ |$$$$  /$$$$ |$$    |   $$    $$< 
+$$ |  $$ |$$$$$$$  |$$$$$/    $$$$$$$$ |$$ $$ $$/$$ |$$$$$/    $$$$$$$  |
+$$ |__$$ |$$ |  $$ |$$ |_____ $$ |  $$ |$$ |$$$/ $$ |$$ |_____ $$ |  $$ |
+$$    $$/ $$ |  $$ |$$       |$$ |  $$ |$$ | $/  $$ |$$       |$$ |  $$ |
+$$$$$$$/  $$/   $$/ $$$$$$$$/ $$/   $$/ $$/      $$/ $$$$$$$$/ $$/   $$/ 
+```
+
+---
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aristech/nimbasms.svg?style=flat-square)](https://packagist.org/packages/aristech/nimbasms)
 [![Total Downloads](https://img.shields.io/packagist/dt/aristech/nimbasms.svg?style=flat-square)](https://packagist.org/packages/aristech/nimbasms)
 [![License](https://img.shields.io/packagist/l/aristech/nimbasms.svg?style=flat-square)](https://packagist.org/packages/aristech/nimbasms)
 
-Un package Laravel élégant pour intégrer l'API Nimba SMS, permettant l'envoi de SMS, la gestion des contacts et groupes, les vérifications par code, et bien plus encore.
+Un package Laravel élégant pour intégrer l'API Nimba SMS, permettant l'envoi de SMS, la gestion des contacts et des groupes, les vérifications par code, et bien plus encore.
 
 ## Fonctionnalités
 
 - 📱 Envoi de SMS simple et programmé
-- 👥 Gestion complète des contacts et groupes
+- 👥 Gestion complète des contacts et des groupes
 - ✅ Système de vérification par code
-- 📊 Rapports de livraison
-- 🔄 Gestion des erreurs robuste
-- 🛡️ Compatible avec Laravel 10.x et 11.x
+- 📊 Rapports de livraison et statistiques
+- 🔄 Gestion robuste des erreurs via des exceptions spécialisées
+- 🛡️ Gestion configurable de la vérification SSL (désactivation en développement)
+- 🔄 Compatible avec Laravel 10.x et 11.x
 
 ## Prérequis
 
@@ -43,6 +83,8 @@ php artisan vendor:publish --tag=config
 NIMBA_SMS_SERVICE_ID=votre_service_id
 NIMBA_SMS_SECRET=votre_secret
 NIMBA_SMS_BASE_URL=https://api.nimbasms.com/
+# Désactivez la vérification SSL en développement (à activer en production)
+NIMBA_SMS_SSL_VERIFY=false
 ```
 
 2. Le fichier de configuration `config/nimbasms.php` est disponible pour personnalisation :
@@ -52,6 +94,8 @@ return [
     'serviceId' => env('NIMBA_SMS_SERVICE_ID', ''),
     'secret'    => env('NIMBA_SMS_SECRET', ''),
     'baseUrl'   => env('NIMBA_SMS_BASE_URL', 'https://api.nimbasms.com/'),
+    // Contrôle de la vérification SSL (important en production)
+    'ssl_verify'=> filter_var(env('NIMBA_SMS_SSL_VERIFY', true), FILTER_VALIDATE_BOOLEAN),
 ];
 ```
 
@@ -81,8 +125,8 @@ class SmsController extends Controller
 try {
     $response = $this->smsClient->send(
         'MonEntreprise',           // Nom de l'expéditeur
-        ['+22457123456'],         // Liste des destinataires
-        'Votre message ici'       // Contenu du message
+        ['+22457123456'],          // Liste des destinataires
+        'Votre message ici'        // Contenu du message
     );
     
     // Traitement de la réponse
@@ -102,7 +146,7 @@ try {
 ```php
 // Création d'un contact
 $response = $smsClient->createContact(
-    'John Doe',                    // Nom
+    'John Doe',                   // Nom
     ['Clients', 'VIP'],           // Groupes
     '+22457123456'                // Numéro
 );
@@ -156,28 +200,28 @@ $response = $smsClient->validateVerification(
 ```php
 $response = $smsClient->scheduleSms(
     'MonEntreprise',             // Expéditeur
-    ['+22457123456'],           // Destinataires
+    ['+22457123456'],            // Destinataires
     'Message programmé',         // Contenu
-    '2024-12-31 23:59:59'       // Date d'envoi
+    '2024-12-31 23:59:59'         // Date d'envoi
 );
 ```
 
 ### Rapports
 
 ```php
-// Détails d'un message
+// Récupération d'un message spécifique
 $message = $smsClient->getMessageById('message_id');
 
-// Rapport de livraison
+// Rapport de livraison d'un message
 $report = $smsClient->getDeliveryReport('message_id');
 
-// Liste des messages
+// Liste des messages envoyés
 $messages = $smsClient->getMessages();
 ```
 
 ## Gestion des Erreurs
 
-Le package inclut une gestion des erreurs robuste via `NimbaSmsException` :
+Le package gère les erreurs de manière robuste via l'exception `NimbaSmsException` :
 
 ```php
 try {
@@ -186,7 +230,7 @@ try {
     // Code d'erreur spécifique
     $errorCode = $e->getErrorCode();
     
-    // Détails supplémentaires
+    // Détails supplémentaires de l'erreur
     $details = $e->getErrorDetails();
     
     // Message d'erreur
@@ -203,17 +247,21 @@ try {
 
 ## Tests
 
+Pour exécuter les tests du package :
+
 ```bash
 composer test
 ```
 
+Le package utilise [Orchestra Testbench](https://github.com/orchestral/testbench) pour la configuration du testing.
+
 ## Changelog
 
-Consultez [CHANGELOG.md](CHANGELOG.md) pour les détails des changements récents.
+Consultez [CHANGELOG.md](CHANGELOG.md) pour les détails des modifications récentes.
 
 ## Contribution
 
-Les contributions sont les bienvenues ! Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour les détails.
+Les contributions sont les bienvenues ! Pour plus de détails, consultez [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Sécurité
 
@@ -226,10 +274,10 @@ Si vous découvrez une faille de sécurité, merci d'envoyer un email à [ariste
 
 ## Licence
 
-Le package Nimba SMS est un logiciel open-source sous licence [MIT](LICENSE.md).
+Le package Nimba SMS est distribué sous licence [MIT](LICENSE.md).
 
 ## Support
 
 Pour toute question ou assistance :
-- 📧 Email: aristechdev@gmail.com
+- 📧 Email: [aristechdev@gmail.com](mailto:aristechdev@gmail.com)
 - 📚 [Documentation officielle Nimba SMS](https://developers.nimbasms.com/)

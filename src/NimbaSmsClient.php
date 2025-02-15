@@ -18,7 +18,7 @@ class NimbaSmsClient implements SmsClientInterface
     }
 
     /**
-     * Effectue une requête HTTP vers l'API.
+     * Effectue une requête HTTP vers l'API avec la vérification SSL configurable.
      *
      * @param string $endpoint
      * @param array $data
@@ -29,15 +29,20 @@ class NimbaSmsClient implements SmsClientInterface
     {
         $data = array_merge($data, [
             'serviceId' => $this->config->getServiceId(),
-            'secret' => $this->config->getSecret(),
+            'secret'    => $this->config->getSecret(),
         ]);
 
         $url = $this->config->getBaseUrl() . $endpoint;
 
+        // On configure le client HTTP avec l'option "verify"
+        $httpClient = Http::withOptions([
+            'verify' => config('nimbasms.ssl_verify'),
+        ]);
+
         /** @var Response $response */
-        $response = $method === 'POST' 
-            ? Http::post($url, $data)
-            : Http::get($url, $data);
+        $response = $method === 'POST'
+            ? $httpClient->post($url, $data)
+            : $httpClient->get($url, $data);
 
         if ($response->failed()) {
             throw NimbaSmsException::fromResponse($response);
@@ -51,14 +56,14 @@ class NimbaSmsClient implements SmsClientInterface
         return $this->makeRequest('send', [
             'senderName' => $senderName,
             'recipients' => $recipients,
-            'message' => $message,
+            'message'    => $message,
         ]);
     }
 
     public function createContact($name, array $groups, $numero): array
     {
         return $this->makeRequest('contacts/create', [
-            'name' => $name,
+            'name'   => $name,
             'groups' => $groups,
             'numero' => $numero,
         ]);
@@ -86,14 +91,9 @@ class NimbaSmsClient implements SmsClientInterface
      *
      * @return array
      */
-    public function getContacts()
+    public function getContacts(): array
     {
-        $endpoint = $this->config->getBaseUrl() . 'contacts';
-        $response = Http::get($endpoint, [
-            'serviceId' => $this->config->getServiceId(),
-            'secret'    => $this->config->getSecret(),
-        ]);
-        return $response->json();
+        return $this->makeRequest('contacts', [], 'GET');
     }
 
     /**
@@ -101,14 +101,9 @@ class NimbaSmsClient implements SmsClientInterface
      *
      * @return array
      */
-    public function getGroups()
+    public function getGroups(): array
     {
-        $endpoint = $this->config->getBaseUrl() . 'groups';
-        $response = Http::get($endpoint, [
-            'serviceId' => $this->config->getServiceId(),
-            'secret'    => $this->config->getSecret(),
-        ]);
-        return $response->json();
+        return $this->makeRequest('groups', [], 'GET');
     }
 
     /**
@@ -118,14 +113,9 @@ class NimbaSmsClient implements SmsClientInterface
      *
      * @return array
      */
-    public function getMessageById($messageId)
+    public function getMessageById($messageId): array
     {
-        $endpoint = $this->config->getBaseUrl() . 'messages/' . $messageId;
-        $response = Http::get($endpoint, [
-            'serviceId' => $this->config->getServiceId(),
-            'secret'    => $this->config->getSecret(),
-        ]);
-        return $response->json();
+        return $this->makeRequest('messages/' . $messageId, [], 'GET');
     }
 
     /**
@@ -133,14 +123,9 @@ class NimbaSmsClient implements SmsClientInterface
      *
      * @return array
      */
-    public function getMessages()
+    public function getMessages(): array
     {
-        $endpoint = $this->config->getBaseUrl() . 'messages';
-        $response = Http::get($endpoint, [
-            'serviceId' => $this->config->getServiceId(),
-            'secret'    => $this->config->getSecret(),
-        ]);
-        return $response->json();
+        return $this->makeRequest('messages', [], 'GET');
     }
 
     public function updateContact($contactId, $name, array $groups, $numero): array

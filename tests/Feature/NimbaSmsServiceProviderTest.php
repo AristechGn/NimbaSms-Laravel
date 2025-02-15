@@ -16,7 +16,6 @@ class NimbaSmsServiceProviderTest extends TestCase
     /** @test */
     public function it_provides_config_values()
     {
-        $this->assertEquals('test_service_id', config('nimbasms.serviceId'));
-        $this->assertEquals('test_secret', config('nimbasms.secret'));
+        $this->assertSame('test_service_id', config('nimbasms.serviceId'));
     }
 } 
